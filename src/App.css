@@ -1,28 +1,23 @@
-#root {
+#root, body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #fce4ec; /* Rosa claro */
-
-}
-
-/* Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #473159; /* Fondo oscuro */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f4ffff; /* Texto claro */
+}
+
 h2 {
-  color: #880e4f; /* Rosa oscuro */
+  color: #fec033; /* Amarillo brillante */
 }
 
 .auth-container {
@@ -33,10 +28,10 @@ h2 {
 }
 
 .auth-form {
-  background-color: white;
+  background-color: #692aa2; /* Morado fuerte */
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -45,22 +40,21 @@ h2 {
   padding: 12px;
   margin: 10px 0;
   border-radius: 5px;
-  border: 1px solid #f8bbd0; /* Rosa claro para el borde */
+  border: 1px solid #cb4fc4; /* Rosa fuerte */
   font-size: 16px;
-  background-color: #fce4ec; /* Rosa claro para el fondo */
-  color: #880e4f; /* Rosa oscuro para el texto */
+  background-color: #9b3ab4; /* Morado medio */
 }
 
 .auth-input:focus {
   outline: none;
-  border-color: #e91e63; /* Rosa fuerte para el foco */
-  background-color: #fff;
+  border-color: #f682c0; /* Rosa fuerte */
+  background-color: #c4c5d0; /* Gris claro */
 }
 
 .auth-button {
   width: 100%;
   padding: 12px;
-  background-color: #e91e63; /* Rosa fuerte para el botón */
+  background-color: #e23861; /* Rojo fuerte */
   color: white;
   font-size: 18px;
   border: none;
@@ -70,17 +64,17 @@ h2 {
 }
 
 .auth-button:hover {
-  background-color: #d81b60; /* Rosa más oscuro al pasar el ratón */
+  background-color: #fe7239; /* Naranja fuerte */
 }
 
 .auth-switch {
-  color: #880e4f; /* Rosa oscuro */
+  color: #fec033; /* Amarillo brillante */
   margin-top: 20px;
   font-size: 14px;
 }
 
 .auth-link {
-  color: #e91e63; /* Rosa fuerte para el enlace */
+  color: #f682c0; /* Rosa fuerte */
   cursor: pointer;
   text-decoration: none;
 }
@@ -95,7 +89,6 @@ h2 {
   font-size: 14px;
 }
 
-/* Estilos para PokemonList */
 .pokemon-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -103,14 +96,16 @@ h2 {
 }
 
 .pokemon-card {
-  border: 1px solid #f8bbd0; /* Rosa claro para el borde */
+  border: 2px solid #cb4fc4; /* Borde rosa fuerte */
   margin: 1rem;
   padding: 1rem;
-  width: 200px;
   text-align: center;
-  background-color: #fff3f8; /* Rosa muy claro para las tarjetas */
+  background-color: #2aba6e; /* Verde fuerte */
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 200px;
+  position: relative;
 }
 
 .pokemon-card img {
@@ -119,20 +114,19 @@ h2 {
 }
 
 .pokemon-card h3 {
-  color: #880e4f; /* Rosa oscuro para el título */
+  color: #fec033; /* Amarillo brillante */
   margin-bottom: 5px;
 }
 
 .pokemon-card p {
-  color: #880e4f; /* Rosa oscuro para el texto */
+  color: #f4ffff; /* Texto claro */
   font-size: 14px;
 }
 
-/* Estilos para el logout button */
 .logout-button {
   width: 100%;
   padding: 12px;
-  background-color: #e91e63;
+  background-color: #e23861; /* Rojo fuerte */
   color: white;
   font-size: 18px;
   border: none;
@@ -143,5 +137,91 @@ h2 {
 }
 
 .logout-button:hover {
-  background-color: #d81b60;
+  background-color: #0bdc12; /* Naranja fuerte */
+}
+
+.favorite-button {
+  background-color: #e23861; /* Rosa claro */
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.favorite-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #2f488b; /* Azul fuerte */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+}
+
+.favorite-sidebar.open {
+  right: 0;
+}
+
+.close-sidebar {
+  background-color: #e23861; /* Rojo fuerte */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.app-header {
+  background-color: #155b5d; /* Verde oscuro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-header button {
+  background-color: #e23861; /* Rojo fuerte */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+nd {
+  color: #692aa2
+  #9b3ab4
+  #cb4fc4
+  #f682c0
+  #ffc5e4
+  #2f488b
+  #287fae
+  #44afce
+  #68dee7
+  #bdfeff
+  #155b5d
+  #178764
+  #2aba6e
+  #89ec6b
+  #bffeb3
+  #921866
+  #e23861
+  #fe7239
+  #fec033
+  #fef2b3
+  #473159
+  #67616f
+  #938b98
+  #c4c5d0
+  #f4ffff;
 }
