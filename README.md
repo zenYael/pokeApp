@@ -1,12 +1,24 @@
-# React + Vite
+#  PokeApp 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PokeApp es una aplicación web de React que te permite explorar Pokémon  y guardar tus favoritos ❤️.
 
-Currently, two official plugins are available:
+## ✨ Características ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Puedes registrarte e iniciar sesión .
+* Puedes ver una lista de Pokémon aleatorios .
+* Puedes guardar tus Pokémon favoritos ⭐.
+* Puedes ver tus Pokémon favoritos en un menú lateral .
 
-## Expanding the ESLint configuration
+## ️ Cómo usar ️
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Clona el repositorio .
+2.  Instala las dependencias con `npm install` .
+3.  Crea un archivo `.env.local` con tus claves de Supabase .
+4.  Ejecuta la aplicación con `npm run dev` ▶️.
+
+## ️ Tecnologías ️
+
+* React ⚛️
+* Supabase ☁️
+* PokeAPI 
+* CSS
